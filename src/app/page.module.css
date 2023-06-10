@@ -97,7 +97,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -216,6 +216,13 @@
 
   .logo {
     filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+  }
+
+  .notFound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
 
