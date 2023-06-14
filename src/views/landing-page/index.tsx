@@ -1,5 +1,4 @@
-import React, { Suspense } from "react";
-import { SeasonalAnimeCarousel } from "./components/seasonal-anime-carousel";
+import React from "react";
 import { getCurrentDateTime } from "@/api/datetime";
 import { getCurrentSeasonAnime } from "@/api/season";
 import { SeasonalAnimeCarouselv2 } from "./components/seasonal-anime-carousel/v2";
@@ -18,10 +17,16 @@ export const LandingPageView = async () => {
 
   return (
     <div>
-      <h1>{dateTime}</h1>
+      <h4>{dateTime}</h4>
       {/* <Suspense fallback={<div>Loading...</div>}>
         <SeasonalAnimeCarousel data={seasonAnimeData} />
       </Suspense> */}
+      {/* {seasonAnimes.data.map((item) => (
+        <p key={item.mal_id}>{item.title}</p>
+      ))} */}
+      {/*  <AnimeSelector animes={seasonAnimes.data} /> */}
+
+      {/* why is this glitching? */}
       <SeasonalAnimeCarouselv2 animes={seasonAnimes} />
     </div>
   );

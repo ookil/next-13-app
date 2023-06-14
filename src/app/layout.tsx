@@ -1,9 +1,10 @@
 import { Navbar } from "@/components/navbar";
 import "./globals.css";
-import { Roboto_Mono } from "next/font/google";
+import { Roboto, Roboto_Mono } from "next/font/google";
 import StyledComponentsRegistry from "@/lib/registry";
+import styles from "./page.module.css";
 
-const roboto = Roboto_Mono({ subsets: ["latin"] });
+const roboto = Roboto({ weight: ["400", "500", "700"], subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -19,8 +20,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={roboto.className}>
         <StyledComponentsRegistry>
-          <Navbar />
-          {children}
+          <div className={styles.pageBackground}>
+            <Navbar />
+            {children}
+          </div>
         </StyledComponentsRegistry>
       </body>
     </html>

@@ -6,17 +6,20 @@ import { usePathname } from "next/navigation";
 import React from "react";
 import styled from "styled-components";
 
+const SContainer = styled.div`
+  background: rgba(223, 217, 217, 0.25);
+  backdrop-filter: blur(4px);
+`;
+
 const STopNav = styled.div`
   width: 100%;
   box-shadow: -1px 5px 4px rgba(0, 0, 0, 0.35);
-  background-color: "#000";
+  background-color: #000;
   padding: 0.7rem 2rem;
 `;
 
 const SBottomNav = styled.div`
-  padding: 0.35rem 2rem;
-  background: rgba(223, 217, 217, 0.25);
-  backdrop-filter: blur(4px);
+  padding: 1rem 2rem;
 `;
 
 const SLogoText = styled.h1`
@@ -26,13 +29,14 @@ const SLogoText = styled.h1`
 
 const SLink = styled(Link)<{ $isActive: boolean }>`
   padding: 1rem 2rem;
+  font-size: 1.6rem;
 `;
 
 export const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <div>
+    <SContainer>
       <STopNav>
         <Link href={ROUTE_PATHS.INDEX}>
           <SLogoText>BLING BLING OTAKU</SLogoText>
@@ -52,6 +56,6 @@ export const Navbar = () => {
           Manga
         </SLink>
       </SBottomNav>
-    </div>
+    </SContainer>
   );
 };

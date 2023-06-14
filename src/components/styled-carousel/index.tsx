@@ -7,7 +7,7 @@ import "react-multi-carousel/lib/styles.css";
 const responsive = {
   desktop: {
     breakpoint: { max: 9000, min: 1024 },
-    items: 6,
+    items: 8,
     partialVisibilityGutter: 30,
   },
   tablet: {
@@ -25,5 +25,9 @@ type Props = {
 };
 
 export const StyledCarousel = ({ children }: Props) => {
-  return <Carousel responsive={responsive}>{children}</Carousel>;
+  return (
+    <Carousel centerMode infinite responsive={responsive}>
+      {children}
+    </Carousel>
+  );
 };

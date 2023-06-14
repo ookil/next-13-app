@@ -1,6 +1,6 @@
 "use client";
 
-import { Anime, CurrentSeasonAnimeResponse } from "@/api/season";
+import { Anime, SeasonAnimeResponse } from "@/api/season";
 import React, { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -24,7 +24,7 @@ const responsive = {
 };
 
 type Props = {
-  data: Promise<CurrentSeasonAnimeResponse>;
+  data: Promise<SeasonAnimeResponse>;
 };
 
 export const SeasonalAnimeCarousel = ({ data }: Props) => {

@@ -5,3 +5,5 @@ import { LandingPageView } from "@/views/landing-page";
 export default function Home() {
   return <LandingPageView />;
 }
+
+export const revalidate = 180

@@ -1,0 +1,23 @@
+.card {
+  border-radius: 1.6rem;
+  overflow: hidden;
+  width: 18rem;
+  background: rgb(255, 255, 255);
+}
+
+.titleWrapper {
+  color: black;
+  padding: 1rem 1.5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.link {
+  font-size: 1.4rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

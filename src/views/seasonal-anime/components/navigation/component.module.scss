@@ -1,0 +1,27 @@
+.wrapper {
+  padding: 2rem 3rem;
+  border-radius: 1.6rem;
+  background: rgba(223, 217, 217, 0.25);
+  backdrop-filter: blur(4px);
+}
+
+.linksWrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.link {
+  padding: 1rem;
+  font-size: 1.6rem;
+  border-bottom: 2px solid transparent;
+  text-transform: capitalize;
+
+  &:hover {
+    border-bottom: 2px solid #c86fff;
+  }
+}
+
+
+.activeLink {
+  border-bottom: 2px solid #b160e4;
+}

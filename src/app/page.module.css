@@ -107,6 +107,20 @@
 .logo {
   position: relative;
 }
+
+.pageBackground {
+  background-image: linear-gradient(
+      180deg,
+      rgba(23, 21, 21, 0.25),
+      #171515 64.72%,
+      #171515 82.85%
+    ),
+    url(/images/background.jpg);
+  height: 900px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
