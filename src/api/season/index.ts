@@ -26,7 +26,7 @@ export type SeasonAnimeResponse = {
 };
 
 export const getCurrentSeasonAnime = async (): Promise<SeasonAnimeResponse> => {
-  const res = await fetch(`${process.env.API_URL}/seasons/now`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/seasons/now`);
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 
